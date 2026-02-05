@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTASection() {
     return (
-        <section className="py-40 bg-brand-neutral overflow-hidden">
+        <section className="py-56 bg-brand-neutral overflow-hidden">
             <div className="max-container">
                 <div className="bg-brand-primary rounded-[4rem] p-20 md:p-32 text-center relative overflow-hidden shadow-2xl">
                     {/* Subtle Decorative Elements */}

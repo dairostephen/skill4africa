@@ -1,58 +1,89 @@
-import { Compass, ShieldCheck, Rocket } from 'lucide-react';
+'use client';
+
+import { UserPlus, Search, Send, CheckCircle } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function HowItWorks() {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef<HTMLElement>(null);
+
     const steps = [
         {
-            title: 'Define Your Path',
-            desc: 'Map your career goals to real-world skill requirements using our AI-driven pathfinder.',
-            icon: <Compass className="w-8 h-8 text-brand-primary" />,
+            icon: <UserPlus size={32} />,
+            title: 'Create Account',
+            desc: 'Sign up in minutes with your professional profile or company details.',
+            color: 'bg-blue-50 text-blue-600'
         },
         {
-            title: 'Verify Your Skill',
-            desc: 'Take rigorous, proctored assessments to prove your capabilities to global employers.',
-            icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
+            icon: <Search size={32} />,
+            title: 'Search & Match',
+            desc: 'Find the perfect job or candidate using our advanced AI matching.',
+            color: 'bg-purple-50 text-purple-600'
         },
         {
-            title: 'Accelerate Career',
-            desc: 'Get matched directly with top-tier firms looking for your specific verified expertise.',
-            icon: <Rocket className="w-8 h-8 text-brand-primary" />,
+            icon: <Send size={32} />,
+            title: 'Apply / Post',
+            desc: 'Apply for roles or post vacancies directly on the platform.',
+            color: 'bg-emerald-50 text-emerald-600'
         },
+        {
+            icon: <CheckCircle size={32} />,
+            title: 'Get Results',
+            desc: 'Schedule interviews and finalize hires with career security.',
+            color: 'bg-brand-accent/10 text-brand-accent'
+        }
     ];
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <section id="how-it-works" className="py-24 bg-white">
+        <section ref={sectionRef} className="py-48 bg-brand-neutral relative overflow-hidden">
             <div className="max-container">
-                <div className="max-w-xl mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 tracking-tight">
-                        How it works.
+                <div className={`text-center mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    <h2 className="text-4xl md:text-6xl font-bold text-brand-primary mb-6 tracking-tighter">
+                        How it <span className="text-brand-accent">works</span>.
                     </h2>
-                    <p className="text-lg text-brand-gray font-medium">
-                        We've removed the noise from the hiring process.
-                        Three steps from raw potential to a global career.
+                    <p className="text-brand-gray font-medium text-lg max-w-2xl mx-auto">
+                        A seamless journey designed for Africa's most ambitious professionals and employers.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-16 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {steps.map((step, idx) => (
-                        <div key={idx} className="relative group">
-                            <div className="w-16 h-16 bg-brand-neutral border border-brand-primary/5 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-brand-accent transition-all duration-500 shadow-premium">
+                        <div
+                            key={idx}
+                            style={{ transitionDelay: `${idx * 150}ms` }}
+                            className={`flex flex-col items-center text-center p-8 bg-white rounded-[2.5rem] border border-brand-primary/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                        >
+                            <div className={`w-20 h-20 ${step.color} rounded-2xl flex items-center justify-center mb-8`}>
                                 {step.icon}
                             </div>
-                            <h3 className="text-2xl font-bold text-brand-primary mb-4 flex items-center gap-3">
-                                <span className="text-brand-accent text-sm font-black">0{idx + 1}</span>
-                                {step.title}
-                            </h3>
-                            <p className="text-brand-gray font-medium leading-relaxed">
+                            <h3 className="text-2xl font-bold text-brand-primary mb-4">{step.title}</h3>
+                            <p className="text-brand-gray font-medium text-sm leading-relaxed">
                                 {step.desc}
                             </p>
-
-                            {idx < 2 && (
-                                <div className="hidden lg:block absolute top-8 left-[100%] w-1/2 h-px bg-brand-primary/5 -z-10"></div>
-                            )}
                         </div>
                     ))}
                 </div>
             </div>
+
+            {/* Background Narrative Lines */}
+            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-brand-primary/5 hidden lg:block -z-10"></div>
         </section>
     );
 }

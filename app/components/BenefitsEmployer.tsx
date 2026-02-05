@@ -2,7 +2,7 @@ import { Search, Zap, CheckCircle2, TrendingUp, Cpu } from 'lucide-react';
 
 export default function BenefitsEmployer() {
     return (
-        <section className="py-24 bg-brand-primary text-brand-neutral overflow-hidden relative">
+        <section className="py-48 bg-brand-primary text-brand-neutral overflow-hidden relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
 
             <div className="max-container grid lg:grid-cols-2 gap-20 items-center relative z-10">

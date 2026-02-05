@@ -47,7 +47,7 @@ body::before {
 
 @layer utilities {
   .max-container {
-    @apply max-w-[1440px] mx-auto px-10 lg:px-20 xl:px-32;
+    @apply max-w-[1440px] mx-auto px-8 md:px-16 lg:px-32 xl:px-40;
   }
 
   .h-hero {
