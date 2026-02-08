@@ -1,7 +1,7 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +14,7 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Links to pages on the navbar
     const links = [
         { name: 'Jobs', href: '#' },
         { name: 'Career Advice', href: '#' },

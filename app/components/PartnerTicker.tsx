@@ -7,7 +7,7 @@ export default function PartnerTicker() {
     ];
 
     return (
-        <section className="py-12 bg-white border-b border-brand-primary/5 overflow-hidden">
+        <section className="section-compact bg-white border-b border-brand-primary/5 overflow-hidden">
             <div className="flex flex-col items-center">
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-gray/30 mb-8">
                     Empowering talent for global leaders

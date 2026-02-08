@@ -80,6 +80,14 @@ body::before {
     animation: ticker 40s linear infinite;
   }
 
+  .section-premium {
+    @apply py-32 md:py-48 lg:py-64;
+  }
+
+  .section-compact {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
   @keyframes ticker {
     0% {
       transform: translateX(0);

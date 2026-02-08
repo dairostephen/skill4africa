@@ -20,7 +20,7 @@ export default function WhyUs() {
     ];
 
     return (
-        <section id="why-us" className="section-padding bg-[#fafafa]">
+        <section id="why-us" className="section-premium bg-brand-neutral">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
@@ -44,7 +44,7 @@ export default function WhyUs() {
 
                     <div className="grid gap-6">
                         {reasons.map((r, i) => (
-                            <div key={i} className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-gray-100 flex items-start space-x-6 hover:shadow-2xl transition-all duration-300">
+                            <div key={i} className="bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100 flex items-start space-x-6 hover:shadow-premium hover:-translate-y-1 transition-all duration-500">
                                 <div className="flex-shrink-0">
                                     {r.icon}
                                 </div>

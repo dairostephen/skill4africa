@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-56 bg-brand-neutral overflow-hidden">
+        <section ref={sectionRef} className="section-premium bg-brand-neutral overflow-hidden">
             <div className="max-container">
                 <div className={`text-center mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-4xl md:text-6xl font-bold text-brand-primary mb-6 tracking-tighter">

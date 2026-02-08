@@ -58,7 +58,7 @@ export default function IndustryCategories() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-56 bg-white overflow-hidden">
+        <section ref={sectionRef} className="section-premium bg-brand-neutral overflow-hidden">
             <div className="max-container">
                 <div className={`mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-4xl md:text-6xl font-bold text-brand-primary mb-6 tracking-tighter">
@@ -74,7 +74,7 @@ export default function IndustryCategories() {
                         <div
                             key={idx}
                             style={{ transitionDelay: `${idx * 100}ms` }}
-                            className={`group relative h-[400px] overflow-hidden rounded-[3rem] border border-brand-primary/5 transition-all duration-1000 ${isVisible ? 'opacity-100 rotate-0 translate-y-0 scale-100' : 'opacity-0 rotate-3 translate-y-20 scale-95'}`}
+                            className={`group relative h-[480px] overflow-hidden rounded-[3rem] border border-brand-primary/5 transition-all duration-1000 ${isVisible ? 'opacity-100 rotate-0 translate-y-0 scale-100' : 'opacity-0 rotate-3 translate-y-20 scale-95'}`}
                         >
                             {/* Background Image */}
                             <div
@@ -86,7 +86,7 @@ export default function IndustryCategories() {
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/20 to-transparent group-hover:via-brand-primary/40 transition-colors duration-500" />
 
                             {/* Content */}
-                            <div className="absolute inset-x-0 bottom-0 p-10 flex justify-between items-end">
+                            <div className="absolute inset-x-0 bottom-0 p-12 flex justify-between items-end">
                                 <div>
                                     <span className="text-xs font-black text-brand-accent uppercase tracking-widest mb-2 block">{cat.count}</span>
                                     <h3 className="text-2xl font-bold text-white">{cat.title}</h3>

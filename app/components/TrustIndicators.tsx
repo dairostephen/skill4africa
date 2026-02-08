@@ -70,7 +70,7 @@ export default function TrustIndicators() {
     ];
 
     return (
-        <section ref={sectionRef} className="py-48 bg-brand-neutral border-y border-brand-primary/5">
+        <section ref={sectionRef} className="section-premium bg-brand-neutral border-y border-brand-primary/5">
             <div className="max-container flex flex-col md:flex-row justify-around items-center gap-12">
                 {stats.map((stat, idx) => (
                     <div key={idx} className="flex flex-col items-center text-center group">

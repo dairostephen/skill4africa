@@ -20,7 +20,7 @@ export default function BenefitsSeeker() {
     ];
 
     return (
-        <section className="py-24 bg-brand-neutral overflow-hidden">
+        <section className="section-premium bg-white border-y border-brand-primary/5 overflow-hidden">
             <div className="max-container grid lg:grid-cols-2 gap-20 items-center">
                 <div>
                     <h2 className="text-4xl md:text-5xl font-bold text-brand-primary mb-8 tracking-tighter">
@@ -46,7 +46,7 @@ export default function BenefitsSeeker() {
                 </div>
 
                 <div className="relative">
-                    <div className="bg-white p-10 rounded-[3rem] shadow-premium border border-brand-primary/5">
+                    <div className="bg-white p-12 rounded-[3rem] shadow-premium border border-brand-primary/5 hover:-translate-y-1 transition-all duration-500">
                         <div className="flex items-center justify-between mb-12">
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 bg-brand-primary rounded-full"></div>

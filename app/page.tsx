@@ -11,6 +11,8 @@ import PartnerTicker from './components/PartnerTicker';
 import HowItWorks from './components/HowItWorks';
 import IndustryCategories from './components/IndustryCategories';
 import TestimonialsSection from './components/TestimonialsSection';
+import WhyUs from './components/WhyUs';
+import BenefitsSeeker from './components/BenefitsSeeker';
 
 export default function Home() {
   return (
@@ -25,8 +27,10 @@ export default function Home() {
           <PartnerTicker />
           <TrustIndicators />
           <JobsGrid />
+          <WhyUs />
           <HowItWorks />
           <IndustryCategories />
+          <BenefitsSeeker />
           <BenefitsEmployer />
           <TestimonialsSection />
           <BentoGrid />

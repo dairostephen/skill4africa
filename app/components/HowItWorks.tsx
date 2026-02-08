@@ -52,7 +52,7 @@ export default function HowItWorks() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-48 bg-brand-neutral relative overflow-hidden">
+        <section ref={sectionRef} className="section-premium bg-white relative overflow-hidden">
             <div className="max-container">
                 <div className={`text-center mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-4xl md:text-6xl font-bold text-brand-primary mb-6 tracking-tighter">
@@ -68,7 +68,7 @@ export default function HowItWorks() {
                         <div
                             key={idx}
                             style={{ transitionDelay: `${idx * 150}ms` }}
-                            className={`flex flex-col items-center text-center p-8 bg-white rounded-[2.5rem] border border-brand-primary/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                            className={`flex flex-col items-center text-center p-12 bg-white rounded-[3rem] border border-brand-primary/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                         >
                             <div className={`w-20 h-20 ${step.color} rounded-2xl flex items-center justify-center mb-8`}>
                                 {step.icon}

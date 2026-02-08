@@ -1,12 +1,15 @@
 'use client';
 
-import { MapPin, Banknote, Bookmark, Briefcase, Search, Sparkles } from 'lucide-react';
+import { MapPin, Banknote, Bookmark, Briefcase, Search, Sparkles, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const jobs = [
     { title: 'Senior Product Designer', company: 'Google', location: 'Lagos, NG (Remote)', salary: '₦1.2M - ₦1.8M', type: 'Full-time', icon: <Briefcase /> },
     { title: 'Frontend Developer', company: 'Paystack', location: 'Lagos, NG', salary: '₦800k - 1.2M', type: 'Full-time', icon: <Briefcase size={20} /> },
     { title: 'UX Researcher', company: 'Interswitch', location: 'Lagos, NG', salary: '₦600k - 900k', type: 'Contract', icon: <Briefcase size={20} /> },
+    { title: 'Cloud Engineer', company: 'Flutterwave', location: 'Lagos, NG', salary: '₦1.5M - 2.2M', type: 'Full-time', icon: <Sparkles size={20} className="text-brand-accent" /> },
+    { title: 'Data Scientist', company: 'Andela', location: 'Global (Remote)', salary: '₦2M+', type: 'Full-time', icon: <Sparkles size={20} className="text-brand-accent" /> },
+    { title: 'Product Manager', company: 'Kuda Bank', location: 'Lagos, NG', salary: '₦900k - 1.4M', type: 'Full-time', icon: <Briefcase size={20} /> },
 ];
 
 export default function JobsGrid() {
@@ -31,7 +34,7 @@ export default function JobsGrid() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-56 bg-white">
+        <section ref={sectionRef} className="section-premium bg-white">
             <div className="max-container">
                 <div className={`flex justify-between items-end mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <div>
@@ -40,8 +43,9 @@ export default function JobsGrid() {
                         </h2>
                         <p className="text-brand-gray font-medium text-lg">Hand-picked roles from top African companies.</p>
                     </div>
-                    <button className="hidden md:flex items-center gap-2 text-brand-primary font-bold hover:text-brand-accent transition-colors">
+                    <button className="hidden md:flex items-center gap-2 text-brand-primary font-bold hover:text-brand-accent transition-all group">
                         View all jobs
+                        <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                     </button>
                 </div>
 
@@ -50,7 +54,7 @@ export default function JobsGrid() {
                         <div
                             key={idx}
                             style={{ transitionDelay: `${idx * 150}ms` }}
-                            className={`bg-white border border-brand-primary/5 rounded-[2rem] p-8 hover:shadow-premium hover:-translate-y-2 transition-all duration-700 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                            className={`bg-white border border-brand-primary/5 rounded-[2.5rem] p-12 hover:shadow-premium hover:-translate-y-2 transition-all duration-700 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                         >
                             <div className="w-12 h-12 bg-brand-neutral rounded-xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-accent transition-colors">
                                 {job.icon}

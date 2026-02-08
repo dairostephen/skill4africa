@@ -25,7 +25,7 @@ export default function BentoGrid() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-56 bg-white overflow-hidden">
+        <section ref={sectionRef} className="section-premium bg-white overflow-hidden">
             <div className="max-container">
                 <div className={`mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-5xl md:text-7xl font-bold text-brand-primary mb-8 tracking-tighter">
